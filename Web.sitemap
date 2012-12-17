@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="default.aspx" title="Home">
+
+    <siteMapNode url="~\page_redirection.aspx" title="Time Entry"  description="Enter Job Timings" />
+    <siteMapNode url="~\employee_record_view.aspx" title="Record Entry Summary"  description="View Salaried Projects" />
+
+
+    <siteMapNode url="~\estimators\add_records.aspx" title="Project Entry"  description="Add Project Detail" />
+    <siteMapNode url="~\estimators\view_records.aspx" title="Project Review "  description="View Project" />
+    <siteMapNode url="~\executives\summary.aspx" title="Project Summary"  description="View Project Summary" />
+    <siteMapNode url="~\manager\manager_summary.aspx" title="Manager Summary"  description="Manager's Summary" />
+    <siteMapNode url="~\manager\page_redirection.aspx" title="Employee Work Summary"  description="View Employees Summary" />
+    
+    <siteMapNode url="~\executives\emp_month_report.aspx" title="Emp Monthly Report(Salaried)"  description="View Employees Hours for Salaried Employee" />
+    
+    <siteMapNode url="~\supervisor\update_record.aspx" title="Update Employee Time"  description="Update Employee Time (for Salaried Employees)" />
+    <siteMapNode url="~\supervisor\manual_time_sheet_salary.aspx" title="Manual Time Entry [Salary]"  description="Manual Time Entry (for Salaried Employees)" />
+	<siteMapNode url="~\executives\PMPartQuote.aspx" title="PMPart Quote"  description="PM Part Quote" />
+    <!--<siteMapNode url="~\supervisor\manual_time_sheet.aspx" title="Manual Time Entry [Hourly]"  description="Manual Time Entry (for Hourly Employees)" />-->
+    
+  </siteMapNode>
+</siteMap>
+

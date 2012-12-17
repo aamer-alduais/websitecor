@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body
+        {
+            background-position: right bottom;
+            padding: 0px;
+            margin: 0px;
+            background-image: url('<%# Page.ResolveUrl("~/images/Page-Background-Logo.png") %> ');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: verdana;
+            font-size: 0.8em;
+            color: #475F78;
+        }
+        .style122
+        {
+            font-weight: bold;
+        }
+        	
+    #header {
+		background-image: url(' <%# Page.ResolveUrl("~/images/Header-Background.png") %> ');
+		background-repeat: repeat-x;
+	}
+    .BreadCrumb {
+	text-align: right;
+}
+    .Breadcrumb-Label {
+	color: #000000;
+	font-size: x-small;
+}
+    .style123 {
+	color: #999999;
+}
+    </style>
+    </head>
+<body>
+    <form id="mainForm" runat="server">
+        
+    
+    	<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 225px">
+			<!-- MSTableType="layout" -->
+			<tr>
+				<td colspan="3" style="height: 193px" valign="top">
+				<!-- MSCellType="DecArea" -->
+				<div id="header">
+					<table style="width: 100%; height: 119px;" cellpadding="0" cellspacing="0">
+						<tr>
+							<td style="width: 231px">
+							    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Header-Logo.png" />
+                            </td>
+							<td style="width: 751px"></td>
+							<td class="BreadCrumb">
+							    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/Header-Name.png" />
+                            </td>
+						</tr>
+					</table>
+				</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" style="width: 599px">
+				<!-- MSCellType="NavBody" -->
+				&nbsp;&nbsp;
+				<asp:Label ID="LabelMasterEmpName" runat="server" Font-Bold="True" 
+                        ForeColor="#000000" CssClass="style126"></asp:Label>
+                <span lang="en-us">&nbsp;<span class="style123">[ </span><asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="style123" Font-Underline="False" />
+                <span class="style123">]</span><br />
+                </span>
+                </td>
+				<td style="width: 100%;" valign="top" class="BreadCrumb">
+				<!-- MSCellType="NavBody" -->
+				<span class="Breadcrumb-Label"><strong>You are Here:</strong></span>
+				<asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" 
+                    Font-Size="0.85em">
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                    <CurrentNodeStyle ForeColor="#333333" />
+                    <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                    <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+                </asp:SiteMapPath>
+            	&nbsp; </td>
+				<td style="height: 32px; width: 10px">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+				<img alt="" height="1" src="images/MsSpacer.gif" width="599" /></td>
+				<td></td>
+				<td>
+				<img alt="" height="1" src="images/MsSpacer.gif" width="10" /></td>
+			</tr>
+		</table>
+    	<table cellpadding="0"  style="width: 100%">
+			<tr>
+				<td  valign="top" style="width: 200px">
+                <asp:TreeView ID="TreeViewNavigation" runat="server" 
+                    DataSourceID="SiteMapDataSource" ImageSet="Arrows" 
+                    LineImagesFolder="~/TreeLineImages" style="text-align: left" 
+                    CssClass="style122">
+                    <ParentNodeStyle Font-Bold="False" />
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                        HorizontalPadding="0px" VerticalPadding="0px" />
+                    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" 
+                        HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+        		</td>
+				<td valign="top">
+				<table style="width: 100%">
+					<tr>
+						<td>
+            <asp:ContentPlaceHolder id="MainContentHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            			</td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+        <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿
+        body
+        {
+	font-family: verdana, arial;
+	font-size: 12px;
+	color: #284E98;
+}
+
+        #jobViewGrid
+{
+    border: 1px solid #C0C0C0;
+    background-color: #F5F5F5;
+}

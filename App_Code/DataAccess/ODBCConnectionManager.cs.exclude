@@ -1,0 +1,46 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+using Microsoft.Data.Odbc;
+
+public class ConnectionManager
+{
+    //ODBC Connection to Epicor Live Database    
+    public static OdbcConnection GetEpicorDirectDatabase() 
+    {
+        
+        string connectionString = ConfigurationManager.ConnectionStrings["EpicorLiveDatabase"].ConnectionString;
+        OdbcConnection connection = new OdbcConnection(connectionString);
+        
+        connection.Open();
+        return connection;
+    }
+
+    public static OdbcConnection GetEpicorDatabase()
+    {
+
+        string connectionString = ConfigurationManager.ConnectionStrings["EpicorSQLServer"].ConnectionString;
+        OdbcConnection connection = new OdbcConnection(connectionString);
+
+        connection.Open();
+        return connection;
+    }
+
+    //ODBC Connection to SQL Server Database
+    public static OdbcConnection GetSQLDatabase() 
+    {
+
+        string connectionString = ConfigurationManager.ConnectionStrings["SQLServerDatabase"].ConnectionString;
+        OdbcConnection connection = new OdbcConnection(connectionString);
+
+        connection.Open();
+        return connection;
+    }
+}

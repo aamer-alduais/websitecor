@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta content="en-us" http-equiv="Content-Language" />
+    <title></title>
+	<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+        html,body
+        {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	background-image: url('images/Header-Background.png');
+	background-repeat: repeat-x;
+}
+	
+	.style1 {
+		text-align: center;
+	}
+	.style2 {
+		text-align: left;
+	}
+     
+
+        </style>
+</head>
+<body>
+    <form id="mainForm" runat="server">
+    	<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%" align="center">
+			<!-- MSTableType="layout" -->
+			<tr>
+				<td>
+				<!-- MSCellType="NavBody" -->
+				<table cellpadding="0" cellspacing="0" style="width: 100%">
+	<tr>
+		<td class="style1">
+		<img alt="Thermotech Logo" height="309" src="images/thermotech_logo_c.png" width="392" /></td>
+	</tr>
+				</table>
+				</td>
+				<td class="mainTable" style="height: 817px;">
+				<!-- MSCellType="ContentBody" -->
+				<div align="center">
+				<table cellspacing="1" class="mainLogin" style="width: 100%">
+					<tr>
+						<td colspan="2">
+						&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="width: 543px">
+                                                                              <div class="style2">
+																				  <br />
+&nbsp;<asp:ContentPlaceHolder id="MainContentHolder" runat="server">
+                                                     
+                                                </asp:ContentPlaceHolder></div>
+																			  &nbsp;</td>
+						<td>
+                                                                              &nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+                                                                              <div style="border: thin gray solid" align="center">
+                                                                              </div>
+						</td>
+					</tr>
+				</table>
+					</div>
+				</td>
+				</tr>
+			<tr>
+				<td style="width: 622px"></td>
+				<td style="height: 3px; width: 625px"></td>
+			</tr>
+		</table>
+
+    </form>
+    
+    </body>
+</html>
